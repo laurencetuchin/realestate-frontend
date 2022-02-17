@@ -22,7 +22,7 @@ function App() {
         >
           Learn Reacts
         </a>
-        <div className="btn btn-primary">Test</div>
+        <div className="btn btn-secondary">Test</div>
         <a className="btn btn-primary"
              data-bs-toggle="collapse"
              href="#collapseExample"
