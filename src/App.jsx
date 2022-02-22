@@ -14,23 +14,10 @@ function App() {
         </p>
  
  
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Reacts
-        </a>
-        <div className="btn btn-secondary">Test</div>
-        <a className="btn btn-primary"
-             data-bs-toggle="collapse"
-             href="#collapseExample"
-             role="button"
-             aria-expanded="false"
-             aria-controls="collapseExample">
-        Bootstrap button
-        </a>
+       
+        
+        <div className="btn btn-primary">Test</div>
+        
     </header>
     </div>
   );
