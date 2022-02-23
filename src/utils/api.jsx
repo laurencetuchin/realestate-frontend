@@ -2,7 +2,8 @@ import axios from 'axios';
 
 export const API = axios.create({
 	// The base URL is required in an axios instance
-	baseURL: import.meta.env.VITE_APP_API_ENDPOINT || "https://realestate-app123.netlify.app/",
+	// baseURL: import.meta.env.VITE_APP_API_ENDPOINT || "https://realestate-app123.netlify.app/",
+	baseURL: "https://realestate-rails-api.herokuapp.com/",
 	// I set the time out for request to be 10 seconds
 	timeout : 10000,
     // I set the request can have cookies
