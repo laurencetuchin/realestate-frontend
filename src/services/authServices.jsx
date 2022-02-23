@@ -1,4 +1,5 @@
 import axios from "axios";
+import API from "../utils/api";
 
 
 // making a post request to create a user
@@ -6,7 +7,8 @@ export const signUpUser = async (user, dispatch) => {
   // asynchronously post new user data request to specific end point
   await axios({
     method: "post",
-    url: `${import.meta.env.VITE_APP_API_ENDPOINT}/users`,
+    // url: `${import.meta.env.VITE_APP_API_ENDPOINT}/users`,
+    url: `${API}/users`,
     headers: { "Content-Type": "application/json" },
     data: {
       "user": {
