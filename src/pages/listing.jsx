@@ -50,6 +50,9 @@ const Listing = () => {
                     <div className="card-content">
                         <p>{property.title}</p>
                         <p>{property.price}</p>
+                        {/* View specific property */}
+                    <Link to={`/properties/${property.id}`}/>
+
                     </div>
                 </div>
             );
