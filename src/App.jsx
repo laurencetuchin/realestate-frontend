@@ -37,14 +37,14 @@ function App() {
   return (
     <>
       <NavBar />
-      <p>Text</p>
       <Routes>
         <Route exact path="/" element={<Login is_loggedIn={is_loggedIn} />} />
-        <Route exact path="/sign_In" element={<Login />} />
-        <Route exact path="/sign_up" element={<SignUp />} />
+        <Route exact path="/signin" element={<Login />} />
+        <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/listing" element={<Listing />} />
         <Route exact path="/sell" element={<Sell />} />
+        <Route exact path="/properties" element={<Listing />} />
         <Route element={<NotFound />} />
       </Routes>
     </>

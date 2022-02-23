@@ -15,6 +15,7 @@ export const signUpUser = async (user, dispatch) => {
         "username": `${user.name}`,
         "email": `${user.email}`,
         "password": `${user.password}`,
+        "password_confirmation": `${user.password_confirmation}`
       },
     },
   })
@@ -37,7 +38,7 @@ export const signInUser = async (user, dispatch) => {
   // asynchronously post new user data request to specific end point
   await axios({
     method: "post",
-    url: `${import.meta.env.VITE_APP_API_ENDPOINT}/users/sign_in`,
+    url: `${API}/users/sign_in`,
     headers: { "Content-Type": "application/json" },
     data: { "user": { "email": `${user.email}`, "password": `${user.password}` } },
   })

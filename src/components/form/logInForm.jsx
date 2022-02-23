@@ -13,8 +13,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 function LogInForm({ linkSignUp }) {
   const defaultFormValues = {
-    email: "",
-    password: "",
+    email: "test3ii343e598@gmail.com",
+    password: "test",
     errMessage: "",
   };
   const [formValues, setFormValues] = useState(defaultFormValues);
@@ -31,12 +31,12 @@ function LogInForm({ linkSignUp }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     signIn({
-      email: formValues.email,
-      password: formValues.password,
+      email: '',
+      password: '',
     });
-    if (!userState.token) {
-      toast("Wow Somthing went wrong !");
-    }
+    // if (!userState.token) {
+    //   toast("Wow Somthing went wrong !");
+    // }
   };
 
   return (

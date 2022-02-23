@@ -161,13 +161,13 @@ function NavBar() {
                 ) : (
                   <>
                     <Link
-                      to="/sign_In"
+                      to="/signin"
                       className="text-gray-600 hover:bg-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-large"
                     >
                       Log In
                     </Link>
                     <Link
-                      to="/sign_up"
+                      to="/signup"
                       className="text-gray-600 hover:bg-gray-500 hover:text-black block px-3 py-2 rounded-md text-base font-large"
                     >
                       Sign Up

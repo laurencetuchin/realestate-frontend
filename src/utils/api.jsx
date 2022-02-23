@@ -38,6 +38,29 @@ API.interceptors.request.use((config) => {
       }
       return Promise.reject(err);
     });
+
+    // get authorization bearer token
+   
+
+
+        
+
+
   
-  
+//   export const getAllProperties = async () => {
+//       axios.get("https://realestate-rails-api.herokuapp.com/api/properties")
+//         .then((res) => { 
+//             console.log(res)
+//             return res.data
+//         })
+//         .catch((error) => {
+//             console.log("error", error)
+//             return error.response;
+//         });
+//     };
+
+
+
+
+
   export default API

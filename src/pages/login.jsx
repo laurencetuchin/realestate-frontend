@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 
 // Context
@@ -14,6 +14,8 @@ import Form from '../components/form/form'
 import FormHeader from '../components/form/formHeader'
 import FormSubheader from '../components/form/formSubheader'
 import LogInForm from '../components/form/logInForm'
+import axios from 'axios';
+
 
 function Login() {
 // login form text
@@ -33,6 +35,20 @@ const is_loggedIn =
       navigate('/home')
     }
   },[currentUserState])
+
+    // Set state for login
+    // const [login, setLogin] = useState({
+    //     username: 'tesee9t55',
+    //     email: 'test3ii343e598@gmail.com',
+    //     password: 'test'
+
+    // })
+    // axios.post('https://realestate-rails-api.herokuapp.com/users', {
+    //     username: login.username,
+    //     email: login.email,
+    //     password: login.password
+    // }, { Authorization: "Bearer" + localStorage.getItem("authToken")    }
+    // )
 
 
     return (

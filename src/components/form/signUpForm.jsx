@@ -20,7 +20,7 @@ function SignUpForm({ linkSignIn }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (currentUserState.token != null) {
+    if (currentUserState.token = !null) {
       navigate("/home");
     }
   }, [currentUserState]);
@@ -34,7 +34,7 @@ function SignUpForm({ linkSignIn }) {
         "Both password need to be the same"
       ),
     }),
-    name: Yup.string().max(255).required("Name is required"),
+    name: Yup.string().max(255).required("Username is required"),
     email: Yup.string()
       .email("Must be a valid email")
       .max(255)
@@ -72,7 +72,7 @@ function SignUpForm({ linkSignIn }) {
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col mb-5">
                 <label
-                  htmlFor="phone"
+                  htmlFor="name"
                   className="mb-1 text-xs tracking-wide text-gray-600"
                 >
                   Name:
@@ -112,7 +112,7 @@ function SignUpForm({ linkSignIn }) {
                     py-2
                     focus:outline-none focus:border-blue-400
                   "
-                    placeholder="Enter your phone number"
+                    placeholder="Enter your username"
                   />
                   {errors.name ? <div>{errors.name}</div> : null}
                 </div>
