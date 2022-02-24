@@ -91,15 +91,7 @@ function Search() {
   );
   }
 
-  useEffect(() => {
-      axios('https://jsonplaceholder.typicode.com/albums/1/photos')
-        .then(res => {
-            console.log(res.data);
-            setProperties(res.data);
-            setFilteredProperties(res.data);
-        })
-        .catch(err => console.log(err));
-    }, []);
+
 
 
 

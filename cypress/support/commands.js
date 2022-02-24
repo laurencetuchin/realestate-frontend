@@ -23,3 +23,35 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Gets jwt token for user
+
+import "cypress-localstorage-commands";
+import { describe } from "mocha";
+let token = "";
+describe("create token", () => {
+	before(() => {
+		cy.postTokenLogin();
+		cy.saveLocalStorage();
+	});
+	beforeEach(() => {
+		cy.restoreLocalStorage();
+	});
+	it("Jwt token should exist in local storage", () => {
+		cy.getLocalStorageItem("token").then((token) => {
+			cy.log("token: " + token);
+			expect(token).to.exist;
+		});
+	});
+	it("should login", () => {
+		cy.visit("http://localhost:3000/signin");
+		cy.get("#email").type("test3ii343e59@gmail.com");
+		cy.get("#password").type("test");
+		cy.get("#login-button").click();
+		cy.wait(10000);
+		cy.getLocalStorageItem("token").then((token) => {
+			cy.log("token: " + token);
+			expect(token).to.exist;
+		});
+	});
+});
