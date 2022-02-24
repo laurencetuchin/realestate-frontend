@@ -6,7 +6,7 @@ function FormLink({ linkSignUp }) {
       <span className="ml-2">
         You {linkSignUp.status} have an account?
         <Link
-          to="/register"
+          to="/signup"
           className="text-lg ml-2 text-blue-500 font-bold"
         >
           {linkSignUp.register} now!

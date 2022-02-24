@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Login from "./pages/login";
 import SignUp from "./pages/signUp";
 import NavBar from "./components/navBar";
+import Search from "./components/search"
 //UserProvider
 import UserProvider from "./utils/userContext";
 // PropertyProvider
@@ -45,6 +46,7 @@ function App() {
         <Route exact path="/listing" element={<Listing />} />
         <Route exact path="/sell" element={<Sell />} />
         <Route exact path="/properties" element={<Listing />} />
+        <Route exact path="/search" element={<Search />} />
         <Route element={<NotFound />} />
       </Routes>
     </>

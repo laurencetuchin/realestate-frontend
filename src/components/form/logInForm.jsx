@@ -13,8 +13,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 function LogInForm({ linkSignUp }) {
   const defaultFormValues = {
-    email: "test3ii343e598@gmail.com",
-    password: "test",
+    email: "",
+    password: "",
     errMessage: "",
   };
   const [formValues, setFormValues] = useState(defaultFormValues);
